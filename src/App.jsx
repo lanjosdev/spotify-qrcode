@@ -45,7 +45,7 @@ export default function App() {
 
         // Direcionar para endereço externo:
         setTimeout(()=> {
-          window.location.href = "https://www.spotify.com/br-pt/premium/";           
+          window.location.href = "https://spotify.link/garra";           
         }, 2000);        
       }
 
