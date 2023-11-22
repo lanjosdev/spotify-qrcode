@@ -1,0 +1,34 @@
+@import './styles/global.scss';
+
+div.App-container {
+    @include spacing-lateral();
+    // background-color: blue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .grid {
+        // background-color: $wh;
+    }
+
+    .content {
+        // background-color: $wh;
+        position: relative;
+        top: -3rem;
+
+        font-family: $font-secundary, sans-serif; //////////////
+        text-align: center;
+
+        h1 {
+            font-weight: 900;
+            margin-bottom: 3rem;
+        }
+
+        p {
+            font-size: 2.3rem;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }    
+}
