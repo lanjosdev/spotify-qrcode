@@ -1,15 +1,17 @@
-// @font-face {
-//   font-family: 'FantaPop';
-//   src: url(../fonts/FantaPop-Regular.otf);
-// }
-// @font-face {
-//   font-family: 'FantaPop';
-//   src: url(../fonts/FantaPop-Regular.ttf);
-// }
+@font-face {
+    font-family: 'CircularSp';
+    src: url(../fonts/CircularStd-Book.otf);
+}
+@font-face {
+    font-family: 'CircularSpBold';
+    src: url(../fonts/CircularStd-Black.otf);
+}
+
 /* VARIABLES & MIXINS */
 // Fontes:
-$font-main: Arial;
+$font-main: 'CircularSp';
 $font-secundary: 'Lato';
+$font-header: 'CircularSpBold';
 
 // Cores:
 $color-main: #1ED760;
