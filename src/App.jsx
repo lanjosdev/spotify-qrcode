@@ -16,8 +16,8 @@ export default function App() {
       const hasCookie = Cookies.get('SpotifyBiz');
 
       if(hasCookie) {
-        setJogou(true);
         setLoading(false);
+        setJogou(true);
 
         // Chama uma function para Direcionar para pagina externa em 15s?
         direcionarURLexterna(15000);
@@ -28,7 +28,6 @@ export default function App() {
         let randomNumber = (Math.random() * 100 ) + 1;
         let date = (Date.now() / 1000) + randomNumber;
         let dateEncoded = btoa(""+date);
-
         session_key = dateEncoded; //parametro para o request API
         // console.log(session_key);
         
@@ -58,6 +57,7 @@ export default function App() {
       console.log('Erro na Request:');
       console.log(erro);
       // setLoading(false);
+      // algoritmo para tratar erro de resquest, tipo setErro(true)...
     } 
     // finally {
     //   console.log('finalyyy');
@@ -65,7 +65,7 @@ export default function App() {
     // }
   }
 
-  function direcionarURLexterna(temp=5000) {
+  async function direcionarURLexterna(temp=5000) {
     // Direcionar para endereço externo:
     setTimeout(()=> {
       window.location.href = "https://spotify.link/garra";           
@@ -81,7 +81,7 @@ export default function App() {
         {loading ? (
           <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
         ) : (
-          jogou && (
+          jogou && ( //nem precisava dessa linha e o state jogou, a nao ser se for tratar if-else
             <>
               <h1>Obrigado por participar!</h1>
               <p>Volte outro dia para <br /> participar novamente.</p>
