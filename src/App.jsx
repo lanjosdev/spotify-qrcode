@@ -18,7 +18,9 @@ export default function App() {
       if(hasCookie) {
         setJogou(true);
         setLoading(false);
-        // Chama uma function para Direcionar para pagina externa em 10s?
+
+        // Chama uma function para Direcionar para pagina externa em 15s?
+        direcionarURLexterna(15000);
       } else {
         let session_key = null;
 
@@ -63,12 +65,12 @@ export default function App() {
     // }
   }
 
-  // function direcionarURLexterna(temp=0) {
-  //   // Direcionar para endereço externo:
-  //   setTimeout(()=> {
-  //     window.location.href = "https://spotify.link/garra";           
-  //   }, temp);
-  // }
+  function direcionarURLexterna(temp=5000) {
+    // Direcionar para endereço externo:
+    setTimeout(()=> {
+      window.location.href = "https://spotify.link/garra";           
+    }, temp);
+  }
   
 
   return (
