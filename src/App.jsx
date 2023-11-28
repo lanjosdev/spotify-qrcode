@@ -19,8 +19,8 @@ export default function App() {
         setLoading(false);
         setJogou(true);
 
-        // Chama uma function para Direcionar para pagina externa em 15s?
-        direcionarURLexterna(15000);
+        // Chama uma function para Direcionar para pagina externa em 25s?
+        direcionarURLexterna(25000);
       } else {
         let session_key = null;
 
@@ -40,8 +40,17 @@ export default function App() {
 
   async function registerSessionKey(sessionkey) {
     try {
+      // Contagem inicial antes da await
+      const startTime = performance.now();
+
       const response = await CALL_SERVER(sessionkey);
-      console.log(response);
+
+      // ===================================================
+      // Faz algo com a promessa
+      const data = await response;
+      console.log(data);
+      // ====================================================      
+
       console.log('SUCESSO REST API!');
 
       // Gera um cookie para indicar que já entrou no jogo:
@@ -51,8 +60,26 @@ export default function App() {
         secure: true,
       });
       
+      // ====================================================
+      // Calcula o tempo decorrido
+      const endTime = performance.now();
+      const timeElapsed = endTime - startTime;
+      // Retorna o tempo decorrido
+      console.log(timeElapsed);
+      // ====================================================
+
       // Direcionar para endereço externo:
-      window.location.href = "https://spotify.link/garra";
+      if(timeElapsed > 3000) {
+        window.location.href = "https://spotify.link/garra";        
+      } else if(timeElapsed > 2000 && timeElapsed < 2999) {
+        setTimeout(()=> {
+          window.location.href = "https://spotify.link/garra";           
+        }, 1000);
+      } else {
+        setTimeout(()=> {
+          window.location.href = "https://spotify.link/garra";           
+        }, 2500);
+      }
     } catch(erro) {
       console.log('Erro na Request:');
       console.log(erro);
@@ -79,7 +106,10 @@ export default function App() {
 
       <div className='content'>
         {loading ? (
-          <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+          <>
+            <h1>Bora Jogar!</h1>
+            <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+          </>
         ) : (
           jogou && ( //nem precisava dessa linha e o state jogou, a nao ser se for tratar if-else
             <>
