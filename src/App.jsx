@@ -9,49 +9,64 @@ import './App.scss';
 
 export default function App() {
   const [loading, setLoading] = useState(true); 
+  const [jogoLiberado, setJogoLiberado] = useState(true);
   const [jogou, setJogou] = useState(false);
 
   useEffect(()=> {
-    function verificaCookie() {
-      const hasCookie = Cookies.get('SpotifyBiz');
-
-      if(hasCookie) {
-        setLoading(false);
-        setJogou(true);
-
-        // Chama uma function para Direcionar para pagina externa em 25s?
-        direcionarURLexterna(25000);
+    function verificaHora() {
+      const atual = new Date(); //cria uma nova instância do objeto Date 
+      const horaAtual = atual.getHours();
+      const minutoAtual = atual.getMinutes();
+      // Ou poderia ser com o metodo .toLocaleTimeString(), que retorna em strg
+      
+      if(horaAtual >= 10 && (horaAtual < 20 || (horaAtual === 20 && minutoAtual === 0))) {
+        // Dentro do horario de funcionamento
+        verificaCookie();
       } else {
-        let session_key = null;
-
-        console.log('criando novo record, vamos enviar');
-        let randomNumber = (Math.random() * 100 ) + 1;
-        let date = (Date.now() / 1000) + randomNumber;
-        let dateEncoded = btoa(""+date);
-        session_key = dateEncoded; //parametro para o request API
-        // console.log(session_key);
-        
-        // CHAMA FUNÇAO ASYNC P/ REQUEST API:
-        registerSessionKey(session_key);    
-      }        
+        // Fora do horario de funcionamento
+        setLoading(false);
+        setJogoLiberado(false);
+      }
     }
-    verificaCookie();
-  }, []);
+    verificaHora();
+  }, []); //Não precisa de dependencia, é apenas para executar na 1a redenrização
+
+  function verificaCookie() {
+    const hasCookie = Cookies.get('SpotifyBiz');
+    setLoading(false);
+
+    if(hasCookie) {
+      setJogou(true);
+
+      // Chama uma function para Direcionar para pagina externa em 25s?
+      direcionarURLexterna(25000);
+    } else {
+      let session_key = null;
+      console.log('criando novo record, vamos enviar');
+      let randomNumber = (Math.random() * 100 ) + 1;
+      let date = (Date.now() / 1000) + randomNumber;
+      let dateEncoded = btoa(""+date);
+      session_key = dateEncoded; //parametro para o request API
+      // console.log(session_key);
+      
+      // CHAMA FUNÇAO ASYNC P/ REQUEST API:
+      registerSessionKey(session_key);    
+    }        
+  }
 
   async function registerSessionKey(sessionkey) {
-    try {
-      // Contagem inicial antes da await
-      const startTime = performance.now();
+    // Contagem inicial antes da await
+    const startTime = performance.now();
 
+    try {
       const response = await CALL_SERVER(sessionkey);
+      console.log('SUCESSO REST API!: ' + response);
 
       // ===================================================
       // Faz algo com a promessa
-      const data = await response;
-      console.log(data);
+      // const data = await response;
+      // console.log(data);
       // ====================================================      
-
-      console.log('SUCESSO REST API!');
 
       // Gera um cookie para indicar que já entrou no jogo:
       Cookies.set('SpotifyBiz', JSON.stringify(sessionkey), {
@@ -69,19 +84,13 @@ export default function App() {
       // ====================================================
 
       // Direcionar para endereço externo:
-      if(timeElapsed > 3000) {
-        window.location.href = "https://spotify.link/garra";        
-      } else if(timeElapsed > 2000 && timeElapsed < 2999) {
-        setTimeout(()=> {
-          window.location.href = "https://spotify.link/garra";           
-        }, 1000);
+      if(timeElapsed > 2000) {
+        direcionarURLexterna(0);       
       } else {
-        setTimeout(()=> {
-          window.location.href = "https://spotify.link/garra";           
-        }, 2500);
+        direcionarURLexterna(2200);
       }
     } catch(erro) {
-      console.log('Erro na Request:');
+      console.log('ERRO na Request:');
       console.log(erro);
       // setLoading(false);
       // algoritmo para tratar erro de resquest, tipo setErro(true)...
@@ -107,14 +116,25 @@ export default function App() {
       <div className='content'>
         {loading ? (
           <>
-            <h1>Bora Jogar!</h1>
             <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
           </>
         ) : (
-          jogou && ( //nem precisava dessa linha e o state jogou, a nao ser se for tratar if-else
+          jogoLiberado ? (
+            jogou ? (
+              <>
+                <h1>Obrigado por participar!</h1>
+                <p>Volte outro dia para <br /> participar novamente.</p>
+              </>
+            ) : (
+              <>
+                <h1>Bora Jogar!</h1>
+                <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+              </>              
+            )
+          ) : (
             <>
-              <h1>Obrigado por participar!</h1>
-              <p>Volte outro dia para <br /> participar novamente.</p>
+              <h1>Horário de funcionamento:</h1>
+              <p>Estamos funcionando a partir das 10:00 até 20:00.</p>
             </>
           )
         )}
