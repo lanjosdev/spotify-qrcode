@@ -14,9 +14,9 @@ $font-secundary: 'Lato';
 $font-header: 'CircularSpBold';
 
 // Cores:
-$color-main: #1ED760;
-$color-text: #000;
-$color-bgmain: #121212; 
+$color-main: #121212;
+$color-text: #fff;
+// $color-bgmain: #121212; 
 
 // Escalas de cinza:
 $wh: #fff;
@@ -192,10 +192,10 @@ body, input, textarea, button, select, a {
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid $bl;
+  border: 8px solid $wh;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: $bl transparent transparent transparent;
+  border-color: $wh transparent transparent transparent;
 }
 .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;

@@ -17,6 +17,7 @@ export async function CALL_SERVER(sessionKey) {
     }
     )
 
-    console.log(response);
+    // console.log(response.data);
+    return response;
 }
 
