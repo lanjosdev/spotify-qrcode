@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1260 1818">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #99ca3c;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke-width: 5px;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        stroke: #d50032;
+      }
+
+      .cls-4 {
+        stroke: #ff8200;
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-5 {
+        stroke: #ffb81c;
+        stroke-width: 5.05px;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" width="1260" height="1818"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g class="cls-6">
+      <g>
+        <path class="cls-4" d="M352.3,592.12c0,70.77-57.36,128.13-128.13,128.13s-128.14-57.36-128.14-128.13,57.37-128.14,128.14-128.14,128.13,57.36,128.13,128.14Z"/>
+        <path class="cls-1" d="M383.26,328.84c0,17.53-14.21,31.75-31.75,31.75s-31.74-14.21-31.74-31.75,14.21-31.75,31.74-31.75,31.75,14.21,31.75,31.75Z"/>
+        <path class="cls-5" d="M691.28,68.83c0,35.38-28.68,64.06-64.07,64.06s-64.07-28.68-64.07-64.06,28.69-64.07,64.07-64.07,64.07,28.69,64.07,64.07Z"/>
+        <path class="cls-4" d="M979.88,1466.51c0,17.69-14.34,32.04-32.04,32.04s-32.04-14.34-32.04-32.04,14.34-32.03,32.04-32.03,32.04,14.34,32.04,32.03Z"/>
+        <path class="cls-3" d="M962.48,196.38c0,17.69-14.34,32.03-32.04,32.03s-32.04-14.34-32.04-32.03,14.34-32.04,32.04-32.04,32.04,14.34,32.04,32.04Z"/>
+        <circle class="cls-5" cx="288.23" cy="1457.41" r="64.07" transform="translate(-946.12 630.68) rotate(-45)"/>
+        <path class="cls-1" d="M1049.26,595.85c0,35.38-28.68,64.07-64.07,64.07s-64.07-28.68-64.07-64.07,28.68-64.07,64.07-64.07,64.07,28.69,64.07,64.07Z"/>
+        <circle class="cls-3" cx="1128.14" cy="1233.02" r="128.13" transform="translate(-541.45 1158.86) rotate(-45)"/>
+      </g>
+    </g>
+  </g>
+</svg>

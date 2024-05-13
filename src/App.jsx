@@ -1,107 +1,160 @@
 // Funcionalidades / Libs:
-import { useState, useEffect } from 'react';
-import { CALL_SERVER } from './API/postApi';
-// import Cookies from "js-cookie";
+import { useState } from 'react';
+import { POST_API } from "./API/requestApi";
+import Cookies from "js-cookie";
+
+// Assets:
+import LogoHeader from './assets/logo_breakingCrystal.svg';
+import ImgGota from './assets/gota.png';
+import ImgGotaErro from './assets/gotaErro.png'
 
 // Estilo:
-import './App.scss';
+import './styles/global.css';
+import './App.css';
 
 
 export default function App() {
-  const [loading, setLoading] = useState(true); 
-  const [jogoLiberado, setJogoLiberado] = useState(true);
+  let participou = false;
+  let sessionKey = null;
+  const [erro, setErro] = useState(false);
+  
 
+  // useEffect(()=> {
+  function verificaCookie() {
+    const hasCookie = Cookies.get('sessionCrystalBiz');
 
-  useEffect(()=> {
-    registerSessionKey();
-  }, []); //Não precisa de dependencia, é apenas para executar na 1a redenrização
+    if(hasCookie) {
+      console.log('Já participou');
+      participou = true;
+      sessionKey = JSON.parse(hasCookie);
+    } else { 
+      console.log('Nova sessão'); 
+      sessionKey = newSessionKey();
+    } 
 
-  async function registerSessionKey() {
-    // ====================================================
-    // Contagem inicial antes da await
-    const startTime = performance.now();
+    console.log(sessionKey);
+    requestApi();
+  }
+  verificaCookie();
+  // }, []);
 
-    let sessionKey = geraSessionKey();
-
+  async function requestApi() {
+    let participated = participou ? 1 : 0; // se participou recebe 1 senão 0
+    console.log(participated);
+    
     try {
-      const response = await CALL_SERVER(sessionKey);
+      const response = await POST_API(sessionKey, participated);
       console.log('SUCESSO REST API!');
       console.log(response.data);
-      setLoading(false);
-      
-      
-      // Calcula o tempo decorrido
-      const endTime = performance.now();
-      const timeElapsed = endTime - startTime;
-      // Retorna o tempo decorrido
-      console.log(timeElapsed);
-    // ====================================================
 
-      // Direcionar para endereço externo:
-      if(timeElapsed > 2000) {
-        direcionarURLexterna(0);       
-      } else {
-        direcionarURLexterna(2500);
+      if(!participou) {
+        console.log('Salvando cookie...');
+        Cookies.set('sessionCrystalBiz', JSON.stringify(sessionKey), {
+          // expires: new Date(Date.now() + 20 * 1000),
+          expires: 1, // Expira em 1dia (24h)
+          sameSite: 'None',
+          secure: true,
+        });
       }
-    } catch(erro) {
+
+      direcionarURLexterna();
+    } 
+    catch(error) {
       console.log('ERRO na API:');
-      console.log(erro);
-      setLoading(false);
-      setJogoLiberado(false);
+      setErro(true);
+      console.log(error);
     } 
     // finally {
-    //   console.log('finalyyy');
-    //   setLoading(false);
+    //   direcionarURLexterna();
     // }
   }
 
-  function geraSessionKey() {
+  function newSessionKey() {
     let session_key = null;
-    console.log('criando novo record, vamos enviar');
+
     let randomNumber = (Math.random() * 100 ) + 1;
     let date = (Date.now() / 1000) + randomNumber;
     let dateEncoded = btoa(""+date);
-    session_key = dateEncoded; //parametro para o request API
+    session_key = dateEncoded;
     // console.log(session_key);
     
     return session_key;
   }
 
-  async function direcionarURLexterna(temp=4000) {
+  function direcionarURLexterna(temp = participou ? 15000 : 500) {
     setTimeout(()=> {
-      window.location.href = "https://www.bizsys.com.br";        
+      window.location.href = "https://urldefense.com/v3/__https://www.coca-cola.com/br/pt/brands/crystal__;!!JhKdOwKRoV0QTA!r9x6SiEdCll3QE4CeAr-dzjWDBvTz-dO4OkFinDn3E943-kMveyHAn7PAQKjeyvnr-OsCpdBmp_vDYvUSVuzkbUc8Prfi3QCrnFbmg$";        
     }, temp);
   }
-  
 
-  return (
-    <div className="App-container">
-      <div className="grid">
 
-      <div className='content'>
-        {loading ? (
-          <> 
-            <h1>Liberando a <br />máquina...</h1>
-            <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
-          </>
+  if(participou) {
+    return (
+      <div className='App'>
 
-        ) : (
+        <header>
+          <img src={LogoHeader} alt="Logo" />
+        </header>
 
-          jogoLiberado ? (
-            <>
-              <h1>Bora Jogar!</h1>
-              <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
-            </>
-          ) : (
-            <>
-              <h1>Ocorreu um Erro :(</h1>
-              <p>Tente novamente.</p>
-            </>
-          )
-        )}
+        <main>
+          <div className="text-gota">
+            <img src={ImgGota} alt="" />
+
+            <div className="text">
+              <p>
+                <span>que pena</span>
+                parece que <br />
+                você já participou
+                por hoje.
+              </p>
+              <p>
+                você pode dançar
+                <span>
+                  novamente <br />
+                  amanhã.
+                </span>
+              </p>
+            </div>
+          </div>
+        </main>
+
+        <footer>
+          <p>agradecemos <br /> sua participação.</p>
+        </footer>
+        
       </div>
+    )
+  } 
+  else if(erro) {
+    return (
+      <div className='App erro'>
+
+        <header>
+          <img src={LogoHeader} alt="Logo" />
+        </header>
+
+        <main>
+          <div className="text-gota">
+            <img src={ImgGotaErro} alt="" />
+
+            <div className="text">
+              <p>
+                <br />
+                <span>que pena</span>
+                parece que <br />
+                algo deu errado.
+              </p>
+              <p>
+                <span>
+                  atualize a página
+                </span>
+                e tente <br /> novamente.
+              </p>
+            </div>
+          </div>
+        </main>
 
       </div>
-    </div>
-  )
+    )
+  }
 }

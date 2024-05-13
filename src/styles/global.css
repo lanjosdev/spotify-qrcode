@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'CeraPro';
+  src: url(../fonts/Cera-Pro-Medium.woff2);
+}
+@font-face {
+  font-family: 'CeraProBlack';
+  src: url(../fonts/Cera-Pro-Black.woff2);
+}
+:root {
+  --color-primary: #FFB91D;
+  --color-secundary: #3b3b3b;
+  --color-bg-1: #F0F0F0;
+  --color-bg-2: #fff;
+  --color-text: #222121;
+
+  --font-main: 'CeraPro';
+  --font-headers: 'Krona One';
+
+  /* color-scheme: light dark; */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+  
+img {
+  display: inline-block;
+  width: 100%;
+  max-width: fit-content;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+input, textarea, select {
+  outline: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  display: inline-block;
+}
+/* RESET */
+
+
+/* GLOBAL */
+html {
+  scroll-behavior: smooth;
+  
+  font-size: 62.5%; /* Pra usar rem divisivel por 10 */
+  /* @media screen and (max-width: 480px) {
+    font-size: 55%;
+  } */
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  
+  background-color: var(--color-bg-1);
+  font-size: 1.6rem; /* Pra garantir q o padrao seja 16px no navegador*/
+  color: var(--color-text);
+
+  overflow: hidden;
+}
+body, input, textarea, button, select, a {
+  font-family: var(--font-main), Verdana, sans-serif;
+}
+
+[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+/* GLOBAL */
+
+
+/* GRID LAYOUT */
+.grid {
+  width: 100%;
+  max-width: 1280px;
+  
+  margin: 0 auto;
+}
+/* GRID LAYOUT */
