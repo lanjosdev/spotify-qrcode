@@ -11,6 +11,7 @@ export async function CALL_SERVER(sessionKey) {
     const response = await axios.post(API_URL, {
         "fk_id_project": 9,
         "session_key": sessionKey,
+        "participated": 0
     },
     {
         headers: {"Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer $2y$10$FL0I5NgdhfhbFShdsvTLbuuN.wUxwtAnwTN2vq1ofSzZoohmxs5b"}
