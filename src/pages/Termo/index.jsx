@@ -112,45 +112,47 @@ export default function Termo() {
                 <div className="termo-container">
                     <div className="termo-texto">
                     <p>
-                        > EMPRESA PROMOTORA: <br />
-                        • O presente regulamento apresenta e disciplina a ativação de abrigo de ônibus especial promovida pela RECOFARMA INDUSTRIA DO AMAZONAS LTDA, pessoa jurídica de direito privado, inscrita no CNPJ sob o n° 61.454.393/0006-02, com sede à Rio de Janeiro – Rio de Janeiro. <br />
-                        • A RECOFARMA INDUSTRIA DO AMAZONAS LTDA é a detentora dos direitos para os fins propostos na Campanha.> ELEGIBILIDADE: <br />
-                        • A presente Campanha é destinada a todo e qualquer consumidor desde que pessoa física, capaz, e com idade igual ou superior a 18 (dezoito) anos (ou menores de 18 (dezoito) anos desde que emancipados legalmente, conforme Código Civil Brasileiro), residente e domiciliado no Brasil, que preencha as condições estabelecidas neste Regulamento ("Consumidor").
+                        <span>{'>'} EMPRESA PROMOTORA:</span> <br />
+                        • O presente regulamento apresenta e disciplina a ativação de campanha publicitária no abrigo de ônibus da Av Paulista nº 900, São Paulo - SP  promovida pela RECOFARMA INDUSTRIA DO AMAZONAS LTDA (“Campanha”), pessoa jurídica de direito privado, inscrita no CNPJ sob o n° 61.454.393/0006-02, com sede à Praia de Botafogo, nº 374, Botafogo, Rio de Janeiro – Rio de Janeiro (“RECOFARMA”).<br />
+                        • A RECOFARMA INDUSTRIA DO AMAZONAS LTDA é a detentora dos direitos para os fins propostos nesta Campanha e dos direitos da marca Crystal (“Termo”).
                     </p>
                     <br />
 
                     <p>
-                        > REGULAMENTO <br />
-                        • A campanha é uma iniciativa organizada pela RECOFARMA INDUSTRIA DO AMAZONAS LTDA para promover o divulgação das águas Crystal. <br />
-                        • O projeto se trata de uma dinâmica, onde o objetivo dos participantes é dançar por aproximadamente 1 minuto e 30 segundos, para ganhar um brinde. <br />
-                        • A dinâmica só poderá ser iniciada através da leitura de um QRCode, que fará a captação do IP Mask do celular, somente com a finalidade de organizar e limitar o número de participantes na ação, a RECOFARMA INDUSTRIA DO AMAZONAS LTDA não armazenará, sob qualquer hipótese o dado coletado. <br />
-                        • Todos os usuários que participarem da ação e finalizarem a dinâmica, poderão retirar a o brinde, que serão liberados de forma randômica. <br />
-                        • Os brindes que serão disponibilizados serão água saborizada, água natural e água com gás.
+                        <span>{'>'} ELEGIBILIDADE</span> <br />
+                        • A presente Campanha é destinada a todo e qualquer consumidor desde que pessoa física, capaz, e com idade igual ou superior a 18 (dezoito) anos (ou menores de 18 (dezoito) anos, emancipados legalmente, conforme Código Civil Brasileiro), residente e domiciliado no Brasil, ou desde que acompanhados do seu responsável legal para autorizar a participação deste na ativação, que preencha as condições estabelecidas neste Regulamento, com plenos poderes e autoridade para conceder à RECOFARMA todos os direitos contemplados nestes Termo("Participante").
                     </p>
                     <br />
 
                     <p>
-                        > AUTORIZAÇÃO DE USO DE IMAGEM <br />
-                        • Neste ato, e para todos os fins de direito, você autoriza através do aceite deste Termo o uso da sua imagem para fins de divulgação e publicidade da Campanha, em caráter definitivo e gratuito, de forma total, definitiva, irretratável e irrevogável os direitos de uso, edição, inserção, exibição, sincronização, reprodução e exploração comercial da fotografia/vídeo especificamente para a Campanha, bem como licencia e autoriza à RECOFARMA INDUSTRIA DO AMAZONAS LTDA também de forma total, definitiva, irretratável e irrevogável os direitos de uso de sua imagem para serem utilizados pela RECOFARMA INDUSTRIA DO AMAZONAS LTDA ou por terceiros autorizados por esta, no todo ou em parte nesta Campanha. <br />
-                        • Você concorda que a RECOFARMA INDUSTRIA DO AMAZONAS LTDA será proprietária exclusiva de todos os direitos autorais e quaisquer outros direitos sobre a Campanha, e que a RECOFARMA INDUSTRIA DO AMAZONAS LTDA seus licenciados, sucessores e/ou cessionários, bem como terceiros autorizados pela RECOFARMA INDUSTRIA DO AMAZONAS LTDA terão o direito de usar, editar, inserir exibir, transmitir, licenciar, comercializar e distribuir a Campanha pelo prazo definido neste Termo contendo ou não sua imagem, no todo ou em parte, em todos os meios de comunicação, em todas e quaisquer formas de mídia hoje ou no futuro existentes, incluindo, mas não se limitando a, todas as formas de rádio e de televisão seja aberta ou fechada/por assinatura e qualquer outra forma de televisão por assinatura, telefonia celular, banda larga, sem fio, (conjuntamente, TV Every-where) e outras plataformas de distribuição que integrem ou venham a integrar o conceito de TV Everywhere, bem como via internet (mídia sem fio wireless), video sob demanda e todas as suas modalidades, Catch Up, em salas de cinema, através de fonogramas (incluindo cassetes, CDs, discos a laser e DVDs, e a veiculação do fonograma em rádios), em circuito cinematográfico, circuito fechado, inclusão em obras audiovisuais em geral, programas de computador, em publicações impressas em geral. <br />
-                        • Você ainda reconhece e concorda que a RECOFARMA INDUSTRIA DO AMAZONAS LTDA poderá usar sua imagem de acordo com os termos e condições estabelecidos nestes T&C havendo compensação em razão da exploração comercial de sua imagem, bem como pela utilização de marca, incluindo os seus elementos nominativos necessários à sua inserção em sua promoção de captação de vídeo, seja a que tempo e a que título for, em todas as mídias, modalidades de utilização e territórios estabelecidos neste instrumento, sem limite máximo quanto ao número de exibições, ficando a RECOFARMA INDUSTRIA DO AMAZONAS LTDA responsável por qualquer consequência decorrente da utilização de sua imagem direta e exclusivamente pela RECOFARMA INDUSTRIA DO AMAZONAS LTDA, nos termos deste T&C. <br />
-                        • Designar as disposições previstas nestes T&C que criam para a RECOFARMA INDUSTRIA DO AMAZONAS LTDA qualquer obrigação de utilização econômica de sua imagem na Campanha, não sendo devido a você, na ausência de utilização pela RECOFARMA INDUSTRIA DO AMAZONAS LTDA, qualquer direito sobre o mesmo. <br />
-                        • O aceite do T&C garante que: (i) é o único titular de todos os direitos da imagem; (ii) tem plenos poderes e autoridade para conceder à RECOFARMA INDUSTRIA DO AMAZONAS LTDA todos os direitos contemplados nestes T&C; (iii) o uso da imagem pela RECOFARMA INDUSTRIA DO AMAZONAS LTDA, conforme estabelecido acima, não viola ou infringe, nem tampouco violará ou infringirá os direitos de qualquer pessoa física ou jurídica e que tal uso autorizado por meio do presente não dará origem a quaisquer alegações de violação, difamação, invasão de privacidade, publicidade, pedidos de pagamento de taxas de reutilização ou residuais, ou quaisquer outras reivindicações.
+                        <span>{'>'} REGULAMENTO</span> <br />
+                        • A Campanha é uma iniciativa organizada pela RECOFARMA para promover o divulgação da marca e distribuição de brindes de águas Crystal. <br />
+                        • O projeto se trata de uma dinâmica, onde o objetivo dos Participantes é dançar por aproximadamente 1 minuto e 30 segundos através da interação digital com câmera e música na tela do Mobiliário Urbano do abrigo de ônibus (“MUB”), para ganhar um brinde: uma garrafa de água da marca Crystal (“Ação”). <br />
+                        • A dinâmica só poderá ser iniciada através da leitura de um QRCode, que fará a captação do IP Mask do celular, somente com a finalidade de organizar e limitar o número de participantes na ação, e com a abertura de câmera após o aceite expresso do Participante a este Termo para iniciar a interação digital com o MUB, de modo que a RECOFARMA não armazenará, sob qualquer hipótese os dados pessoais coletados para esta Campanha. <br />
+                        • Todos os usuários que participarem da Ação e finalizarem a dinâmica, poderão retirar o brinde, que serão liberados de forma randômica para cada Participante. <br />
+                        • Os brindes a serem disponibilizados serão garrafas de: água saborizada, água natural e água com gás da marca Crystal. 
                     </p>
                     <br />
 
                     <p>
-                        > PERÍODO <br />
-                        • Esta Campanha iniciará no dia 27/08/2024 e terminará no dia 02/09/2024.
+                        <span>{'>'} AUTORIZAÇÃO DE USO DE IMAGEM</span> <br />
+                        • Neste ato, e para todos os fins de direito, você, na qualidade de Participante desta Campanha, autoriza através do aceite deste Termo a captação temporária da sua imagem para fins de participação e divulgação institucional e publicitária da Campanha, em caráter definitivo e gratuito, de forma total, definitiva, irretratável e irrevogável, bem como licencia e autoriza à RECOFARMA também de forma total, definitiva, irretratável e irrevogável os direitos de captação temporária de sua imagem para serem utilizados pela RECOFARMA ou por terceiros autorizados por esta.  <br />
+                        • Ao aceitar este Termo você declara e garante que a RECOFARMA  e terceiros autorizados por esta não possuem qualquer obrigação de restituição econômica pela sua imagem na Campanha, não sendo devido a você, qualquer direito sobre o mesmo. <br />
+                        • O aceite deste Termo garante que: (i) é o único titular de todos os direitos da imagem; (ii) tem plenos poderes e autoridade para conceder à RECOFARMA todos os direitos contemplados nestes Termos; (iii) o uso da imagem pela RECOFARMA conforme estabelecido acima, não viola ou infringe, nem tampouco violará ou infringirá os direitos de qualquer pessoa física ou jurídica e que tal uso autorizado por meio do presente não dará origem a quaisquer alegações de violação, difamação, invasão de privacidade, publicidade, pedidos de pagamento de taxas de reutilização ou residuais, ou quaisquer outras reivindicações.
                     </p>
                     <br />
 
                     <p>
-                        > CONSIDERAÇÕES FINAIS: <br />
+                        <span>{'>'} PERÍODO</span> <br />
+                        • Esta Campanha iniciará no dia 27/08/2024 e terminará no dia 02/09/2024, com período de ativação de cada dia das 10h às 16h, sendo certo que nenhum dado pessoal, incluindo a sua imagem ficarão armazenados no MUB utilizado para a Campanha.
+                    </p>
+                    <br />
+
+                    <p>
+                        <span>{'>'} CONSIDERAÇÕES FINAIS</span> <br />
                         • A participação do Consumidor nesta Campanha é voluntária e gratuita, a simples participação do consumidor caracteriza, por si só, a aceitação total e irrestrita de todos os seus termos e condições e demais comunicados a ela relacionados. <br />
                         • O presente Regulamento poderá ser alterado ou suspenso a qualquer tempo, principalmente, mas não somente, por motivo de caso fortuito, força maior ou qualquer outro fator ou motivo imprevisto. <br />
-                        • Todos os termos, condições e disposições deste Regulamento são independentes, sendo certo que, na hipótese de qualquer um de seus termos, condições ou disposições serem considerados inválidos, inexequíveis ou ilegais, no todo ou em parte, por qualquer motivo, a validade e exequibilidade dos demais termos, condições e disposições, ou de partes dos mesmos, não serão afetadas. <br />
-                        • A RECOFARMA INDUSTRIA DO AMAZONAS LTDA é a única responsável pela Campanha isentando o Grupo Eletromidia de quaisquer danos, materiais ou morais, que tenham sido ocasionados em função da Campanha.
+                        • A RECOFARMA é a única responsável pela Campanha isentando o Grupo Eletromidia de quaisquer danos, materiais ou morais, que tenham sido ocasionados em função da Campanha.
                     </p>
 
                     </div>
