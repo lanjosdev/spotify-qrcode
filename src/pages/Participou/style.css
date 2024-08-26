@@ -1,8 +1,8 @@
-.App {
+.Participou {
     position: relative;
     font-size: 2rem;
 
-    header {
+    /* header {
         position: absolute;
         width: 100%;
         z-index: 5;
@@ -13,11 +13,11 @@
         img {
             max-width: 13rem;
         }
-    }
+    } */
 
     main {
         padding-top: 5rem;
-        background-image: url(./assets/BG-circulos.png);
+        background-image: url(../../assets/BG-circulos.png);
         /* background-repeat: no-repeat; */
         background-size: 145%;
         background-position: 50% 120%;

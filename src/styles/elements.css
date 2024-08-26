@@ -1,0 +1,49 @@
+#root:has(.Termo) {
+    overflow-y: auto;
+}
+
+/* GRID LAYOUT */
+.grid {
+    width: 100%;
+    max-width: 1024px;
+    
+    margin: 0 auto;
+}
+/* GRID LAYOUT */
+
+.btn {
+    font-size: 1.7rem;
+    padding: 1.5rem .5rem;
+
+    border-radius: 50px;
+
+    &.primary {
+        background-color: var(--color-text);
+        color: #fff;
+    }
+    &.secundary {
+        background-color: var(--color-bg-1);
+        border: 2px solid var(--color-text);
+        text-align: center;
+    }
+}
+
+.loader {
+    width: 17px;
+    height: 17px;
+    border: 2px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 

@@ -6,6 +6,15 @@
   font-family: 'CeraProBlack';
   src: url(../fonts/Cera-Pro-Black.woff2);
 }
+@font-face {
+  font-family: 'CeraProRegular';
+  src: url(../fonts/Cera-Pro-Regular.woff2);
+}
+@font-face {
+  font-family: 'CeraProBold';
+  src: url(../fonts/Cera-Pro-Bold.woff2);
+}
+
 :root {
   --color-primary: #FFB91D;
   --color-secundary: #3b3b3b;
@@ -14,7 +23,8 @@
   --color-text: #222121;
 
   --font-main: 'CeraPro';
-  --font-headers: 'Krona One';
+  --font-headers: 'CeraProBold';
+  --font-text: 'CeraProRegular';
 
   /* color-scheme: light dark; */
   font-synthesis: none;
@@ -55,6 +65,9 @@ button {
   cursor: pointer;
   display: inline-block;
 }
+label {
+  cursor: pointer;
+}
 /* RESET */
 
 
@@ -76,24 +89,15 @@ body {
   font-size: 1.6rem; /* Pra garantir q o padrao seja 16px no navegador*/
   color: var(--color-text);
 
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 body, input, textarea, button, select, a {
-  font-family: var(--font-main), Verdana, sans-serif;
+  font-family: var(--font-main), var(--font-text), Verdana, sans-serif;
 }
 
 [disabled] {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 /* GLOBAL */
-
-
-/* GRID LAYOUT */
-.grid {
-  width: 100%;
-  max-width: 1280px;
-  
-  margin: 0 auto;
-}
-/* GRID LAYOUT */

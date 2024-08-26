@@ -1,0 +1,13 @@
+.Header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+
+    background-color: #fff;
+    padding: 2.4rem;
+
+    img {
+        max-width: 13rem;
+    }
+}
