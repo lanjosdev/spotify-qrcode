@@ -1,6 +1,6 @@
-@import './styles/global.scss';
+@import '../../styles/global.scss';
 
-div.App-container {
+div.Home-container {
     @include spacing-lateral();
     height: 100vh;
     display: flex;
